@@ -1,0 +1,26 @@
+<h1><%@destination.name%></h1>
+
+<fieldset>
+    <legend><font size='5'>Fun facts</font></legend>
+    <p><b><font size='4'>Place:</font></b> <%=@destination.name%>, <%=@destination.country%></p>
+    <p><b><font size='4'>5 Most Recent Posts About:</font></b>
+        <ol>
+           <% @destination.top5.each do |post| %>
+             <li><%=link_to post.title, post_path(post) %></li>
+             <% end %>
+        </ol></p>
+
+    <p><b><font size='4'>Highlighted Post:</font></b> 
+    <% if !@destination.best_post.empty? %>
+        <%=link_to @destination.best_post.title, post_path(@desination.best_post) %></p>
+    <% else %>
+        <p>No posts about this destination have been liked yet.</p>
+        <% end %>
+
+
+    <p><b><font size='4'>Avg Blogger Age:</font></b>
+    <% if @destination.avg_age %>
+       <%=@desination.avg_age %></p>
+    <% else %>
+      <p>No one has written about this destination yet.</p>
+    <% end %>

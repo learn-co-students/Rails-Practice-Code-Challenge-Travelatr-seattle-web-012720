@@ -1,0 +1,21 @@
+<div>
+  <% if flash[:notice] %>
+    <% flash[:notice].each {|message| %>
+       <%= message %>
+       <% } %>
+</div>
+<%= form_for @post do |f| %>
+    <p><font size='4'><%= f.label :title %></font>
+    <%= f.text_field :title %></p>
+  
+    <p><font size='4'><%= f.label :content %></font>
+    <%= f.text_area :content %></p>
+  
+    <p><font size='4'><label>Select a Blogger</label></font>
+    <%= f.collection_select :blogger_id, Blogger.all, :id, :name %></p>
+
+    <p><font size='4'><label>Select a Destination</label></font>
+    <%= f.collection_select :destination_id, Destination.all, :id, :name %></p>
+  
+    <%= f.submit "Create your Post" %>
+      <% end %>

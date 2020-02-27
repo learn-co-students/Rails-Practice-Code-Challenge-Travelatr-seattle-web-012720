@@ -1,0 +1,17 @@
+<h1><%=@post.title%></h1>
+
+<fieldset>
+<legend><font size='5'>Post Details</font></legend>
+<p><b><font size='4'>Content:</font></b> <%=@post.content %></p>
+<p><b><font size='4'>Author:</font></b> <%=link_to @post.blogger.name, blogger_path(@post.blogger) %></p>
+<p><b><font size='4'>Desination:</font></b> <%=link_to "#{@post.destination.name}, #{@post.destination.country}", destination_path(@post.destination) %></p>
+<p><b><font size='4'>Number of Likes:</font></b> <%=@post.likes%></p>
+
+<p><b><font size='4'>Like this Post?</font></b> 
+<%= form_tag(post_path(@post), method: 'get') do %>
+  <%=hidden_field_tag(:likes, params[:likes]=true) %>
+  <%= submit_tag("I like it!") %>
+
+<% end %>
+
+

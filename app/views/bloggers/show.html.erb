@@ -1,0 +1,12 @@
+<h1><%=@blogger.name%></h1>
+
+<fieldset>
+<legend><font size='5'>Fun facts</font></legend>
+<p><b><font size='4'>Age:</font></b> <%=@blogger.age %></p>
+<p><b><font size='4'>Bio:</font></b> <%=@blogger.bio %></p>
+<p><b><font size='4'>Total Likes:</font></b> <%=@blogger.like_count %></p>
+<p><b><font size='4'>Highlighted Post:</font></b> <%=link_to @blogger.best_post.title, post_path(@blogger.best_post) %></p>
+
+<br><br>
+
+<%=button_to "Edit info", edit_blogger_path %>
