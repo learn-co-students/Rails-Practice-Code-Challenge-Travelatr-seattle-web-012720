@@ -12,7 +12,9 @@ class Blogger < ApplicationRecord
     end
 
     def best_post
+      if !self.posts.empty?
         best = self.posts.max_by {|post| post.likes}
         best
+      end
     end
 end

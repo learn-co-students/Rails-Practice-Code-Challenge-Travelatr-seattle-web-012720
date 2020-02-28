@@ -5,7 +5,13 @@
 <p><b><font size='4'>Age:</font></b> <%=@blogger.age %></p>
 <p><b><font size='4'>Bio:</font></b> <%=@blogger.bio %></p>
 <p><b><font size='4'>Total Likes:</font></b> <%=@blogger.like_count %></p>
-<p><b><font size='4'>Highlighted Post:</font></b> <%=link_to @blogger.best_post.title, post_path(@blogger.best_post) %></p>
+<p><b><font size='4'>Highlighted Post:</font></b> 
+  <% if @blogger.best_post %>
+    <%=link_to @blogger.best_post.title, post_path(@blogger.best_post) %></p>
+  <% else %>
+    No posts written and/or liked yet.</p>
+    <% end %>
+
 
 <br><br>
 

@@ -66,47 +66,47 @@ Destination.create({
 
 Blogger.create({
     name: 'John',
-    bio: 'boom da doom',
+    bio: 'boom da doom boom da boom boom da boom',
     age: 14
   })
 Blogger.create({
     name: 'Paula',
-    bio: 'hey coolio',
+    bio: 'hey coolio what is the dealio',
     age: 12
   })
 Blogger.create({
     name: 'Dory',
-    bio: 'travel!!!',
+    bio: 'travel!!! all i wanna do is travel all the time',
     age: 13
   })
   blogger4 = Blogger.create({
     name: 'Nemo',
-    bio: 'hiking rocks',
+    bio: 'hiking rocks hike hike hike the AT',
     age: 34
   })
 Blogger.create({
     name: 'Hook',
-    bio: 'climbing is my fave',
+    bio: 'climbing is my fave so find me a cliff',
     age: 54
   })
 Blogger.create({
     name: 'Smee',
-    bio: 'let us go fly a kite',
+    bio: 'let us go fly a kite up to the highest of heights',
     age: 26
   })
 Blogger.create({
     name: "Hamilton",
-    bio: 'listen to me',
+    bio: 'listen to me i wanna play airplane',
     age: 28
   })
 Blogger.create({
     name: "Thornton",
-    bio: 'there he blows',
+    bio: 'there he blows and the ship wind halyard',
     age: 29
   })
 Blogger.create({
     name: "Stevie",
-    bio: 'i am not a boy',
+    bio: 'i am not a boy but i am not a girl',
     age: 19
   })
 Blogger.create({
@@ -116,7 +116,7 @@ Blogger.create({
   })
 Blogger.create({
     name: "Ali",
-    bio: 'yip yip yip',
+    bio: 'yip yip yip heyyo let us make this longer',
     age: 21
   })
 
