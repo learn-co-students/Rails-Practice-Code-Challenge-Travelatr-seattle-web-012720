@@ -1,0 +1,9 @@
+<h1><%= @blogger.name %></h1>
+  <li>Total Likes: <%= @likes %></li><br>
+  <h2>Featured Post:</h2>
+ <% if @featured == 0%>
+   <li>No featured post yet</li>
+ <% else %>  
+   <li><%= link_to @featured.title, @featured %></li><br>
+ <% end %>
+  <li><%=  %></li><br>
