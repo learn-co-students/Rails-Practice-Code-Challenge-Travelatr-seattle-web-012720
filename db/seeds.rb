@@ -7,28 +7,135 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-30.times do 
+# 30.times do 
+#   Destination.create({
+#     name: Faker::GameOfThrones.city,
+#     country: Faker::Address.country
+#   })
+# end
+
+Destination.create({
+    name: "London",
+    country: "England"
+  })
   Destination.create({
-    name: Faker::GameOfThrones.city,
-    country: Faker::Address.country
+    name: "Paris",
+    country: "France"
   })
-end
+  Destination.create({
+    name: "DC",
+    country: "USA"
+  })
+  Destination.create({
+    name: "Oslo",
+    country: "Sweden"
+  })
+  Destination.create({
+    name: "Copenhagen",
+    country: "Denmark"
+  })
+  Destination.create({
+    name: "NYC",
+    country: "USA"
+  })
+  Destination.create({
+    name: "Carson City",
+    country: "Nevada"
+  })
+  Destination.create({
+    name: "Mexico City",
+    country: "Mexico"
+  })
+  Destination.create({
+    name: "Vancouver",
+    country: "Canada"
+  })
+  Destination.create({
+    name: "Beijing",
+    country: "China"
+  })
 
 
-10.times do
-  blogger = Blogger.create({
-    name: Faker::Name.name,
-    bio: Faker::Hipster.paragraph,
-    age: (13..100).to_a.sample
+
+# 10.times do
+#   blogger = Blogger.create({
+#     name: Faker::Name.name,
+#     bio: Faker::Hipster.paragraph,
+#     age: (13..100).to_a.sample
+#   })
+
+Blogger.create({
+    name: 'John',
+    bio: 'boom da doom boom da boom boom da boom',
+    age: 14
   })
+Blogger.create({
+    name: 'Paula',
+    bio: 'hey coolio what is the dealio',
+    age: 12
+  })
+Blogger.create({
+    name: 'Dory',
+    bio: 'travel!!! all i wanna do is travel all the time',
+    age: 13
+  })
+  blogger4 = Blogger.create({
+    name: 'Nemo',
+    bio: 'hiking rocks hike hike hike the AT',
+    age: 34
+  })
+Blogger.create({
+    name: 'Hook',
+    bio: 'climbing is my fave so find me a cliff',
+    age: 54
+  })
+Blogger.create({
+    name: 'Smee',
+    bio: 'let us go fly a kite up to the highest of heights',
+    age: 26
+  })
+Blogger.create({
+    name: "Hamilton",
+    bio: 'listen to me i wanna play airplane',
+    age: 28
+  })
+Blogger.create({
+    name: "Thornton",
+    bio: 'there he blows and the ship wind halyard',
+    age: 29
+  })
+Blogger.create({
+    name: "Stevie",
+    bio: 'i am not a boy but i am not a girl',
+    age: 19
+  })
+Blogger.create({
+    name: "Mikey",
+    bio: 'into the woods and down the dell',
+    age: 18
+  })
+Blogger.create({
+    name: "Ali",
+    bio: 'yip yip yip heyyo let us make this longer',
+    age: 21
+  })
+
 
   (2..6).to_a.sample.times do 
     Post.create({
-      title: Faker::Hipster.sentence(3),
-      content: Faker::Hipster.paragraphs(4),
+      title: "A post a post a post",
+      content: ['The best key lime pie is still up for debate.',
+      'He always wore his sunglasses at night.',
+      'The tour bus was packed with teenage girls heading toward their next adventure.',
+      'David subscribes to the stuff your tent into the bag strategy over nicely folding it.',
+      'Iron pyrite is the most foolish of all minerals.',
+      'I would be delighted if the sea were full of cucumber juice.',
+      'There were white out conditions in the town; subsequently, the roads were impassable.',
+      'She could not decide if the glass was half empty or half full so she drank it.',
+      'Carol drank the blood as if she were a vampire.'].sample,
       likes: 0,
-      blogger: blogger,
+      blogger: Blogger.all.sample,
       destination: Destination.all.sample
     })
   end
-end
+
