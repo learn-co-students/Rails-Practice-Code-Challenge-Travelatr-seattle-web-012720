@@ -1,0 +1,11 @@
+<%= form_for @blogger do |f| %>
+    <div>Name:<%= f.text_field :name %></div><br />
+    <div>Bio:<%= f.text_area :bio %></div><br />
+    <div>Age:<%= f.number_field :age %></div><br />
+    <%= f.submit %>
+<%end%>
+<% if flash[:notice] %>
+    <%= flash[:notice].each do |notice|%>
+        <%=notice%><br>
+    <%end%>
+<%end%>

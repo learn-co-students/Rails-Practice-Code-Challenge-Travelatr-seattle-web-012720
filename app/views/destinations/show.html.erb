@@ -1,0 +1,13 @@
+<h2><%= @destination.name %></h2>
+<h3>Most Recent Posts:</h3>
+<% @most_recent.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+<% end %>
+<h3>Featured Post:</h3>
+ <% if @featured == 0%>
+   <li>No featured post yet</li>
+ <% else %>  
+   <li><%= link_to @featured.title, @featured %></li><br>
+ <% end %>
+ <h3>Average age of bloggers posting about this destination:</h3>
+ <li><%= @average_age %></li>

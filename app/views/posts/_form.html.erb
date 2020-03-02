@@ -1,0 +1,15 @@
+
+<% if flash[:notice] %>
+<%= flash[:notice].each do |notice|%>
+    <%=notice%>
+<%end%>
+<%end%>
+
+<%= form_for @post do |f| %>
+    Title: <%= f.text_field :title %><br>
+    Content: <%= f.text_area :content %><br>
+    Blogger: <%= f.collection_select :blogger_id, Blogger.all, :id, :name %><br>
+    Destination: <%= f.collection_select  :destination_id, Destination.all, :id, :name %><br>
+  <br><%= f.submit %>
+  <% end %>
+  
